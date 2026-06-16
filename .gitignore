@@ -1,0 +1,12 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# misc
+/.env
+.DS_Store          # Ignores macOS system files
+npm-debug.log*     # Ignores Node/NPM debug logs
+yarn-debug.log*    # Ignores Yarn debug logs
+dist               # If you use TypeScript or build tools, ignore the output folder
+build              # Another common name for build output
