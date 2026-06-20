@@ -16,5 +16,8 @@
     "dotenv": "^17.4.2",
     "openai": "^6.44.0",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.4"
   }
 }

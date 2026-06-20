@@ -14,10 +14,19 @@ Result:
 
 
 # Server-managed conversations
-    - You can let the OpenAI Responses API persist conversation history for you instead of sending your entire local conversation history on every turn. This is useful when you are coordinating long conversations or multiple services.
+    - You can let the OpenAI Responses API persist conversation history 
+    for you instead of sending your entire local conversation history on every turn. 
+    This is useful when you are coordinating long conversations or multiple services.
 
     - OpenAI exposes two ways to reuse server-side state:
 
-1. conversationId for an entire conversation
+    1. conversationId for an entire conversation
 
-2. previousResponseId to continue from the last turn
+    2. previousResponseId to continue from the last turn
+
+
+# Context Management
+   - Context is an overloaded term. There are two main classes of context you might care about:
+
+    1. Local context that your code can access during a run: dependencies or data needed by tools, callbacks like onHandoff, and lifecycle hooks.
+    2. Agent/LLM context that the language model can see when generating a response.
