@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { Agent, run, tool } from '@openai/agents'
 import { z } from 'zod'
-
+// BY USING CONVERSATION ID---
 const executeSQL = tool({
     name: 'execute_sql',
     description: 'This will execute the SQL query',
@@ -42,7 +42,7 @@ async function runSQLAgentFun(q = "") {
     const res = await run(sqlAgent, q, {
         conversationId: `conv_6a36d2e908c08193a308cb9036dcf4be0d770be66308aca1`
     })
-    
+
     console.log('Response of Agent:', res.finalOutput)
 
 }
