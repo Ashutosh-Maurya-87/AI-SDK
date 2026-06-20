@@ -18,6 +18,8 @@ const codingInputAgent = new Agent({
 // making custom input guardrail
 const codingInputGuardrail = {
     name: 'Coding Guardrail',
+    // Set runInParallel to false to block the model until the guardrail completes and for cost minimazation.
+    runInParallel: false,
     execute: async ({ input }) => {
         const res = await run(codingInputAgent, input)
         return {

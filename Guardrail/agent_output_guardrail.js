@@ -17,6 +17,8 @@ const mathAgentOutputGuardrail = new Agent({
 })
 const agentOuptputGuardrail = {
     name: 'Output Agent Guardrail',
+    // Set runInParallel to false to block the model until the guardrail completes and for cost minimazation.
+    runInParallel: false,
     execute: async ({ agentOutput, context }) => {
         console.log('context having:', context)
         const res = await run(mathAgentOutputGuardrail, agentOutput.response, { context })
